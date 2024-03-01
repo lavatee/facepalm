@@ -1,1 +1,351 @@
+body {
+  margin: 0px;
+}
+
+#frame {
+position: relative;
+width: 1903px;
+height: 919px;
+
+background: radial-gradient(50% 50% at 50% 50%, #FFE2FE 43%, #D5B5FF 100%);
+}
+
+/* Rectangle 1 */
+#Rectangle1 {
+position: absolute;
+width: 1903px;
+height: 183px;
+left: 0px;
+top: 0px;
+
+background: #BE8BFF;
+}
+
+/* Rectangle 4 */
+#Rectangle2 {
+position: absolute;
+width: 299px;
+height: 104px;
+left: 772px;
+top: 317px;
+
+background: rgba(190, 139, 255, 0.1);
+border: 15px solid #B082EC;
+border-radius: 20px;
+}
+
+/* Rectangle 2 */
+#Rectangle3 {
+position: absolute;
+width: 498px;
+height: 101px;
+left: 688px;
+top: 472px;
+
+background: #7B5AA5;
+border-radius: 20px;
+}
+
+/* Rectangle 3 */
+#Rectangle4 {
+box-sizing: border-box;
+
+position: absolute;
+width: 498px;
+height: 101px;
+left: 688px;
+top: 452px;
+
+background: #BE8BFF;
+border: 7px solid #7B5AA5;
+border-radius: 20px;
+}
+
+/* zigapro */
+#zig {
+position: absolute;
+width: 245px;
+height: 74px;
+left: 729px;
+top: 0px;
+
+font-family: 'Sofia Sans';
+font-style: normal;
+font-weight: 800;
+font-size: 70px;
+line-height: 84px;
+display: flex;
+align-items: center;
+text-align: center;
+transform: scale(0);
+color: #4C287B;
+animation-name: idd;
+animation-duration: 300ms;
+animation-delay: 0.5s;
+animation-fill-mode: forwards;
+}
+@keyframes idd {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/* сгенерировать */
+#gen {
+position: absolute;
+width: 498px;
+height: 101px;
+left: 735px;
+top: 390px;
+
+font-family: 'Sofia Sans';
+font-style: normal;
+font-weight: 700;
+font-size: 60px;
+line-height: 72px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #FFE2FE;
+}
+
+
+/* ВАШ НИКНЕЙМ */
+#aaa {
+position: absolute;
+left: 830px;
+top: 320px;
+
+font-family: 'Sofia Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 31px;
+line-height: 78px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #B082EC;
+animation-name: id;
+animation-duration: 70ms;
+}
+
+#bbb {
+position: absolute;
+left: 930px;
+top: 320px;
+
+font-family: 'Sofia Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 31px;
+line-height: 78px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #B082EC;
+animation-name: id;
+animation-duration: 70ms;
+}
+#ccc {
+position: absolute;
+left: 1030px;
+top: 320px;
+
+font-family: 'Sofia Sans';
+font-style: normal;
+font-weight: 500;
+font-size: 31px;
+line-height: 78px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #B082EC;
+animation-name: id;
+animation-duration: 70ms;
+}
+
+@keyframes id {
+  0% {
+    transform: translate(0px, -70%);
+  }
+  100% {
+    transform: translate(0px, 70%);
+  }
+}
+
+
+/* генератор ников онлайн */
+#on {
+position: absolute;
+width: 341px;
+height: 57px;
+left: 841px;
+top: 77px;
+
+font-family: 'Sofia Sans';
+font-style: normal;
+font-weight: 200;
+font-size: 30px;
+line-height: 36px;
+display: flex;
+align-items: center;
+text-align: center;
+transform: scale(0);
+color: #753FBA;
+animation-name: iddd;
+animation-duration: 400ms;
+animation-delay: 0.8s;
+animation-fill-mode: forwards;
+}
+@keyframes iddd {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#knop {
+  transform: translate(0px, -920px);
+  transition-duration: 300ms;
+}
+#knop:hover {
+  transform: translate(0px, -905px);
+  cursor: pointer;
+}
+#knop:active {
+  transform: translate(0px, -897px);
+  cursor: pointer;
+}
+
+/* Rectangle 9 */
+#Rectangle7 {
+position: absolute;
+width: 103px;
+height: 109px;
+left: 890px;
+top: 328px;
+
+background: #F7C7FF;
+}
+
+/* Rectangle 10 */
+#Rectangle8 {
+position: absolute;
+width: 103px;
+height: 109px;
+left: 787px;
+top: 331px;
+
+background: #EFB1FF;
+}
+
+/* Rectangle 11 */
+#Rectangle9{
+position: absolute;
+width: 103px;
+height: 109px;
+left: 993px;
+top: 328px;
+}
+
+
+/* Rectangle 7 */
+#Rectangle10 {
+position: absolute;
+width: 1903px;
+height: 919px;
+top:0px;
+background: rgba(0, 0, 0, 0.4);
+}
+
+/* Rectangle 8 */
+#Rectangle11 {
+position: absolute;
+width: 1132px;
+height: 463px;
+left: 385px;
+top: 228px;
+background: #FFB5B5;
+border-radius: 50px;
+}
+
+/* Поздравляем, вы выиграли */
+#vig {
+position: absolute;
+width: 997px;
+height: 78px;
+left: 453px;
+top: 370px;
+font-family: 'Sofia Sans';
+font-style: normal;
+font-weight: 1;
+font-size: 65px;
+line-height: 78px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.14em;
+
+color: #000000;
+}
+
+
+/* x */
+#x {
+position: absolute;
+width: 50px;
+height: 78px;
+left: 1408px;
+top: 234px;
+padding-left:19px;
+font-family: 'Sofia Sans';
+font-style: normal;
+font-weight: 1;
+font-size: 65px;
+line-height: 78px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+letter-spacing: 0.14em;
+transition-duration: 200ms;
+color: #000000;
+border-radius: 10px;
+}
+#x:hover {
+  background-color: black;
+  color: #FFB5B5;
+  cursor: pointer;
+}
+
+#vi {
+  transform: scale(0);
+  transition-duration: 200ms;
+}
+#vvi {
+  position: absolute;
+  transform: scale(1);
+  transition-duration: 200ms;
+  transition-delay: 0.3s;
+  top: 0px;
+}
+/* Rectangle 12 */
+#Rectangle12 {
+position: absolute;
+width: 269px;
+height: 70px;
+left: 805px;
+top: 342px;
+background: rgba(255, 255, 255, 0.9);
+border-radius: 20px;
+}
 
