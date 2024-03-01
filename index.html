@@ -1,90 +1,126 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>фэйспалм</title>
+  <title>генератор ников</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="./index.css">
-
+  <link rel="stylesheet" href="./in.css">
 </head>
 <body>
-  <div class="cir"></div>
-  <div class="circle"></div>
-  <div class="rectangle"></div>
-  <img src="img\Без названия141_20240225224241.png" alt="фэйспалм" id="face">
-  <p><img src="img\icons8-камера-100.png" id="startbutton"><p>
-  <div class="contentarea">
-  <div class="camera">
-    <video id="video">Видеопоток недоступен.</video>
-  </div><br>
-  <canvas id="canvas"></canvas>
-  <div class="output"></div>
+  <div id="frame"></div>
+  <div id="Rectangle7"></div>
+  <div id="Rectangle8"></div>
+  <div id="Rectangle9"></div>
+  <div id="Rectangle1"></div>
+  <div id="Rectangle2"></div>
+  <div id="Rectangle5"></div>
+  <div id="Rectangle6"></div>
+  <div id="Rectangle3"></div>
+  <div id="knop" onclick="zig()">
+    <div id="Rectangle4"></div>
+    <p id="gen">сгенерировать</p>
+  </div>
+  <h1 id="zig">@gryaznybilly</h1>
+  <p id="on">казино онлайн</p>
+  <p id="aaa"></p>
+  <p id="bbb"></p>
+  <p id="ccc"></p>
+
+  <div id="vi">
+    <div id="Rectangle10"></div>
+    <div id="Rectangle11"></div>
+    <div id="Rectangle12"></div>
+    <h1 id="vig">Поздравляем, вы выиграли</h1>
+    <h1 id="x" onclick="crect()">x</h1>
+  </div>
 
   <script>
+var a = ["1", "2", "3"];
+var b = ["1", "2", "3"];
+var c = ["1", "2", "3"];
 
-    (function() {
-      var width = 320;
-      var height = 0;
-      var streaming = false;
-      var video = null;
-      var canvas = null;
-      var photo = null;
-      var startbutton = null;
-      function startup() {
-          video = document.getElementById('video');
-          canvas = document.getElementById('canvas');
-          photo = document.getElementById('photo');
-          startbutton = document.getElementById('startbutton');
-          navigator.mediaDevices.getUserMedia({ video: {facingMode: { exact: "environment" } } })
-              .then(function(stream) {
-                  video.srcObject = stream;
-                  video.play();
-                  startbutton.classList.add('streaming');
-              })
-              .catch(function(err) {
-                  console.log("An error occurred: " + err);
-              });
-          video.addEventListener('canplay', function(ev) {
-              if (!streaming) {
-                  height = video.videoHeight / (video.videoWidth / width);
-                  if (isNaN(height)) {
-                      height = width / (4 / 3);
-                  }
-                  video.setAttribute('width', width);
-                  video.setAttribute('height', height);
-                  canvas.setAttribute('width', width);
-                  canvas.setAttribute('height', height);
-                  streaming = true;
-              }
-          }, false);
-          startbutton.addEventListener('click', function(ev) {
-              takepicture();
-              ev.preventDefault();
-          }, false);
+var aa = a.length - 1;
+var bb = b.length - 1;
+var cc = c.length - 1;
+
+function g(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+
+function zig() {
+  var i = 0;
+  var e = 0;
+  var w = 0;
+  var u = 0;
+  var y = setInterval(zigg, 70);
+  var x = setInterval(ziggg, 70);
+  var z = setInterval(zigggg, 70);
+  var o = setInterval(ss, 70);
+
+  function zigg() {
+    var huy = document.getElementById('aaa');
+    huy.remove();
+    var ra = g(0, aa);
+    var aaa = a[ra];
+    var h = document.createElement("h2");
+    h.innerHTML = aaa;
+    var hhhh = document.getElementById('nik');
+    document.body.insertBefore(h, hhhh);
+    h.id = 'aaa';
+    i++;
+    if(i == 25)
+      clearInterval(y)
+  }
+  function ziggg() {
+    var huyy = document.getElementById('bbb');
+    huyy.remove();
+    var rb = g(0, bb);
+    var bbb = b[rb];
+    var hh = document.createElement("h2");
+    hh.innerHTML = bbb;
+    var hhhh = document.getElementById('nik');
+    document.body.insertBefore(hh, hhhh);
+    hh.id = 'bbb';
+    e++;
+    if(e == 35)
+      clearInterval(x);
+  }
+  function zigggg() {
+    var huyyyy = document.getElementById('ccc');
+    huyyyy.remove();
+    var rc = g(0, cc);
+    var ccc = c[rc];
+    var hhh = document.createElement("h2");
+    hhh.innerHTML = ccc;
+    var hhhh = document.getElementById('nik');
+    document.body.insertBefore(hhh, hhhh);
+    hhh.id = 'ccc';
+    w++;
+    if(w == 45)
+      clearInterval(z)
+  }
+    function ss() {
+      u++;
+      var aaaa = document.getElementById('aaa')
+      var bbbb = document.getElementById('bbb')
+      var cccc = document.getElementById('ccc')
+      if (u == 45 && aaaa.textContent == bbbb.textContent && aaaa.textContent == cccc.textContent && bbbb.textContent == cccc.textContent) {
+        p = document.getElementById('vi');
+        p.id = 'vvi';
       }
-      function takepicture() {
-          var context = canvas.getContext('2d');
-          if (width && height) {
-              canvas.width = width;
-              canvas.height = height;
-              context.drawImage(video, 0, 0, width, height);
-              var data = canvas.toDataURL('image/png');
-              let photo = new Image;
-              photo.src = data;
-              let botton = document.createElement('button');
-              botton.textContent = 'del';
-              botton.addEventListener('click', () => {
-                  botton.remove();
-                  photo.remove();
-              });
-              document.querySelector('.output').append(photo, botton);
-          }
-      }
-      window.addEventListener('load', startup, false);
-    })();
+    }
+}
+
+function crect() {
+  l = document.getElementById('vvi')
+  l.id = 'vi';
+}
 
   </script>
 </body>
