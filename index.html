@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>фэйспалм</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./index.css">
+
+</head>
+<body>
+  <div class="cir"></div>
+  <div class="circle"></div>
+  <div class="rectangle"></div>
+  <img src="img\Без названия141_20240225224241.png" alt="фэйспалм" id="face">
+  <p><img src="img\icons8-камера-100.png" id="startbutton"><p>
+  <div class="contentarea">
+  <div class="camera">
+    <video id="video">Видеопоток недоступен.</video>
+  </div><br>
+  <canvas id="canvas"></canvas>
+  <div class="output"></div>
+
+  <script>
+
+    (function() {
+      var width = 320;
+      var height = 0;
+      var streaming = false;
+      var video = null;
+      var canvas = null;
+      var photo = null;
+      var startbutton = null;
+      function startup() {
+          video = document.getElementById('video');
+          canvas = document.getElementById('canvas');
+          photo = document.getElementById('photo');
+          startbutton = document.getElementById('startbutton');
+          navigator.mediaDevices.getUserMedia({ video: {facingMode: { exact: "environment" } } })
+              .then(function(stream) {
+                  video.srcObject = stream;
+                  video.play();
+                  startbutton.classList.add('streaming');
+              })
+              .catch(function(err) {
+                  console.log("An error occurred: " + err);
+              });
+          video.addEventListener('canplay', function(ev) {
+              if (!streaming) {
+                  height = video.videoHeight / (video.videoWidth / width);
+                  if (isNaN(height)) {
+                      height = width / (4 / 3);
+                  }
+                  video.setAttribute('width', width);
+                  video.setAttribute('height', height);
+                  canvas.setAttribute('width', width);
+                  canvas.setAttribute('height', height);
+                  streaming = true;
+              }
+          }, false);
+          startbutton.addEventListener('click', function(ev) {
+              takepicture();
+              ev.preventDefault();
+          }, false);
+      }
+      function takepicture() {
+          var context = canvas.getContext('2d');
+          if (width && height) {
+              canvas.width = width;
+              canvas.height = height;
+              context.drawImage(video, 0, 0, width, height);
+              var data = canvas.toDataURL('image/png');
+              let photo = new Image;
+              photo.src = data;
+              let botton = document.createElement('button');
+              botton.textContent = 'del';
+              botton.addEventListener('click', () => {
+                  botton.remove();
+                  photo.remove();
+              });
+              document.querySelector('.output').append(photo, botton);
+          }
+      }
+      window.addEventListener('load', startup, false);
+    })();
+
+  </script>
+</body>
+</html>
