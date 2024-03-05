@@ -1,6 +1,6 @@
 body {
   background-color: #ECF1FB;
-  margin: 20px;
+  margin: 40px;
 }
 
 /* ЗАРЕГИСТРИРОВАТЬ КЛАСС */
@@ -41,28 +41,28 @@ min-width: 288px;
   font-family: 'Marmelad';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   min-width: 267px;
 }
 #teacher {
   padding: 15px;
   margin-top: 20px;
-  border-radius: 18px;
+  border-radius: 20px;
   font-family: 'Marmelad';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   min-width: 267px;
 }
 
 #myInput {
   margin-top: 20px;
   padding: 10px;
-  border-radius: 18px;
+  border-radius: 20px;
   font-family: 'Marmelad';
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   min-width: 267px;
 }
 #add {
