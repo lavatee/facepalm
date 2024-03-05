@@ -79,6 +79,12 @@ min-width: 288px;
   font-weight: 400;
   font-size: 16px;
   text-align: center;
+  display: block;
+  text-decoration: none;
+}
+#addd {
+  display: block;
+  text-decoration: none;
 }
 
 .name {
@@ -126,4 +132,6 @@ li {
   font-weight: 400;
   font-size: 16px;
   text-align: center;
+  display: block;
+  text-decoration: none;
 }
