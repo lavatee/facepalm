@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>webapp</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="master.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container-fluid" id="back">
+      <a href="./tg.html" type="button" class="glyphicon glyphicon-arrow-left" class="form-control" id="ar"></a>
+    </div>
+      <div class="container-fluid">
+        <input type="text" id="class" class="form-control" placeholder="Введите класс">
+      </div>
+      <div class="container-fluid" id="found">
+        <a type="button" id="find" onclick="foundclass()">Найти класс</a>
+      </div>
+      <div class="container-fluid">
+        <input type="text" id="teacher" class="form-control" placeholder="Введите id классного руководителя">
+      </div>
+      <div class="container-fluid">
+        <input type="text" id="myInput" class="form-control" placeholder="Введите ФИ ученика">
+      </div>
+      <div class="container-fluid" id="addd">
+        <a type="button" id="add" onclick="newElement()">+</a>
+      </div>
+    <ul id="myUL1">
+
+    </ul>
+    <div class="container-fluid">
+      <a type="button" class="fixed-bottom" id="save2" onclick="saveli1()" onclick="saveli()">сохранить</a>
+    </div>
+
+
+    <script src="./tg.js">
+
+    </script>
+  </body>
+</html>
