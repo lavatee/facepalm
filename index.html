@@ -16,85 +16,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
   </head>
   <body>
-      <div class="container-fluid">
-        <input type="text" id="input" class="form-control" placeholder="Введите класс">
-      </div>
-      <div class="container-fluid">
-        <input type="text" id="teacher" class="form-control" placeholder="Введите телеграмм классного руководителя">
-      </div>
-      <div class="container-fluid">
-        <input type="text" id="myInput" class="form-control" placeholder="Введите ФИ ученика">
-      </div>
-      <div class="container-fluid">
-        <div type="button" id="add" onclick="newElement()">+</div>
-      </div>
-    <ul id="myUL">
-
-    </ul>
     <div class="container-fluid">
-      <a href="./tg.html" type="button" class="fixed-bottom" id="save1" onclick="saveli()">сохранить</a>
+      <a href="./reg.html" id="reg" type="button" class="btn btn-default">ЗАРЕГИСТРИРОВАТЬ КЛАСС</a>
+      <a href="./edit.html" id="change" type="button" class="btn btn-default">ИЗМЕНИТЬ СОСТАВ КЛАССА</a>
+      <a href="./webcam.html" id="cam" role="botton" class="btn btn-default">ОТКРЫТЬ КАМЕРУ</a>
     </div>
 
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
-    <script>
-var mylist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < mylist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  mylist[i].appendChild(span);
-}
+    <div class="container-fluid">
+      <button id="save" type="button" class="btn btn-default" class="fixed-bottom">СОХРАНИТЬ</button>
+    </div>
 
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
-  }
-}
-
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
-
-function newElement() {
-  var li = document.createElement("li");
-  var inputValue = document.getElementById("myInput").value;
-  var t = document.createTextNode(inputValue);
-  li.appendChild(t);
-  if (inputValue === '') {
-    alert("Введите имя ученика");
-  } else {
-    document.getElementById("myUL").appendChild(li);
-  }
-  document.getElementById("myInput").value = "";
-
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  li.appendChild(span);
-
-  for (i = 0; i < close.length; i++) {
-    close[i].onclick = function() {
-      var div = this.parentElement;
-      div.remove();
-    }
-  }
-}
-function saveli() {
-  var names = document.getElementsByTagName('LI')
-  for ( student of names ){
-    console.log(student.innerHTML.replace('<span class="close">×</span>', ''));
-  }
-}
-
-    </script>
   </body>
 </html>
