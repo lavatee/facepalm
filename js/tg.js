@@ -1,15 +1,4 @@
-//var i = 0;
-//function inp() {
-  //var inputElement = document.getElementById("input1");
-  //var value = inputElement.value;
-  //console.log(value);
-  //i++;
-  //var val = document.createElement("h2");
-  //val.innerHTML = i + ")   " + value;
-  //var hhhh = document.getElementById('borya');
-  //document.body.insertBefore(val, hhhh);
-  //val.classList.add('name');
-//}
+
 var mylist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < mylist.length; i++) {
