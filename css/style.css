@@ -1,6 +1,6 @@
 body {
   background-color: #ECF1FB;
-  margin: 40px;
+  margin: 30px;
 }
 
 /* ЗАРЕГИСТРИРОВАТЬ КЛАСС */
@@ -65,6 +65,16 @@ min-width: 288px;
   font-size: 11px;
   min-width: 267px;
 }
+#class {
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 20px;
+  font-family: 'Marmelad';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  min-width: 267px;
+}
 #add {
   background-color: #4684FF;
   color: white;
@@ -85,6 +95,12 @@ min-width: 288px;
 #addd {
   display: block;
   text-decoration: none;
+}
+#found {
+  display: block;
+}
+#find {
+  display: block;
 }
 
 .name {
@@ -134,4 +150,46 @@ li {
   text-align: center;
   display: block;
   text-decoration: none;
+}
+#find {
+  background-color: #4684FF;
+  color: white;
+  margin-top: 20px;
+  padding: 10px 20px 10px 20px;
+  margin: 90px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  border-radius: 20px;
+  font-family: 'Marmelad';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+#save2 {
+  position: fixed;
+  background-color: #4684FF;
+  color: white;
+  margin-top: 20px;
+  padding: 20px 20px 20px 20px;
+  margin-top: 20px;
+  margin-top: 480px;
+  font-family: 'Marmelad';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+#ar {
+  font-size: 40px;
+  text-align: center;
+  color: #4684FF;
+  text-decoration: none;
+}
+#back {
+  width: 100%;
 }
