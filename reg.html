@@ -16,15 +16,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
   </head>
   <body>
+      <div class="container-fluid" id="back">
+        <a href="./index.html" type="button" class="glyphicon glyphicon-arrow-left" class="form-control" id="ar"></a>
+      </div>
+      <div class="container-fluid">
+        <input type="text" id="input" class="form-control" placeholder="Введите класс">
+      </div>
+      <div class="container-fluid">
+        <input type="text" id="teacher" class="form-control" placeholder="Введите id классного руководителя">
+      </div>
+      <div class="container-fluid">
+        <input type="text" id="myInput" class="form-control" placeholder="Введите ФИ ученика">
+      </div>
+      <div class="container-fluid" id="addd">
+        <a type="button" id="add" onclick="newElement()">+</a>
+      </div>
+    <ul id="myUL1">
+
+    </ul>
     <div class="container-fluid">
-      <a href="./index.html" id="reg" type="button" class="btn btn-default">ЗАРЕГИСТРИРОВАТЬ КЛАСС</a>
-      <a href="./index.html" id="change" type="button" class="btn btn-default">ИЗМЕНИТЬ СОСТАВ КЛАССА</a>
-      <a href="https://gryazny.github.io/facepalm/" id="cam" role="botton" class="btn btn-default">ОТКРЫТЬ КАМЕРУ</a>
+      <a type="button" class="fixed-bottom" id="save1" onclick="saveli()">сохранить</a>
     </div>
 
-    <div class="container-fluid">
-      <button id="save" type="button" class="btn btn-default" class="fixed-bottom">СОХРАНИТЬ</button>
-    </div>
 
+    <script src="./tg.js">
+
+    </script>
   </body>
 </html>
