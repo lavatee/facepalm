@@ -1,0 +1,221 @@
+body {
+  background-color: #E4EDF0;
+  margin: 30px;
+  margin-top: 50px;
+}
+
+/* ЗАРЕГИСТРИРОВАТЬ КЛАСС */
+.btn {
+font-family: "Exo 2", sans-serif;
+font-optical-sizing: auto;
+font-weight: 300;
+font-size: 16px;
+line-height: 21px;
+padding: 25px;
+color: #314146;
+background-color: #B4D7E1;
+border-radius: 20px;
+width: 100%;
+margin-top: 30px;
+min-width: 288px;
+}
+.btn:hover {
+  color: #4684FF;
+}
+#input::placeholder {
+    color: #314146;
+    opacity: 0.5;
+}
+#class::placeholder {
+    color: #314146;
+    opacity: 0.5;
+}
+#input1::placeholder {
+    color: #314146;
+    opacity: 0.5;
+}
+#teacher::placeholder {
+    color: #314146;
+    opacity: 0.5;
+}
+#myInput::placeholder {
+    color: #314146;
+    opacity: 0.5;
+}
+
+#save {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  padding: 15px;
+  color: #314146;
+  background-color: #B4D7E1;
+  margin-top: 30px;
+  border-radius: 0px;
+  min-width: 288px;
+}
+#input {
+  padding: 15px;
+  border-radius: 18px;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  color: #314146;
+  background-color: #FFF;
+  border: 0px;
+  font-size: 11px;
+  min-width: 267px;
+}
+#teacher {
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 20px;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  color: #314146;
+  background-color: #FFF;
+  border: 0px;
+  font-size: 11px;
+  min-width: 267px;
+}
+
+#myInput {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  background-color: #FFF;
+  color: #314146;
+  border: 0px;
+  font-size: 11px;
+  min-width: 267px;
+}
+#class {
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 20px;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  color: #314146;
+  background-color: #FFF;
+  border: 0px;
+  font-size: 11px;
+  min-width: 267px;
+}
+
+#add {
+  background-color: #B4D7E1;
+  color: #314146;
+  margin-top: 20px;
+  padding: 10px 20px 10px 20px;
+  margin: 90px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  border-radius: 20px;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+#addd {
+  display: block;
+  text-decoration: none;
+}
+#found {
+  display: block;
+}
+#find {
+  display: block;
+}
+
+
+
+li {
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  text-align: center;
+  padding: 5px;
+  color: #314146;
+  background-color: #E4EDF0;
+  border: 3px solid #B4D7E1;
+  margin-left: -30px;
+  margin-top: 10px;
+  border-radius: 20px;
+  list-style-type: none;
+}
+
+#save1 {
+  position: fixed;
+  background-color: #B4D7E1;
+  color: #314146;
+  margin-top: 20px;
+  padding: 20px 20px 20px 20px;
+  margin-top: 20px;
+  margin-top: 480px;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+#find {
+  background-color: #B4D7E1;
+  color: #314146;
+  margin-top: 20px;
+  padding: 10px 20px 10px 20px;
+  margin: 90px;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  border-radius: 20px;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+#save2 {
+  position: fixed;
+  background-color: #B4D7E1;
+  color: #314146;
+  margin-top: 20px;
+  padding: 20px 20px 20px 20px;
+  margin-top: 20px;
+  margin-top: 480px;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+#ar {
+  font-size: 40px;
+  text-align: center;
+  color: #314146;
+  text-decoration: none;
+}
+#back {
+  width: 100%;
+}
+.close {
+  color: #314146;
+  opacity: 1;
+  margin-top: -3px;
+}
