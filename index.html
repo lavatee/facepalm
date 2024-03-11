@@ -9,22 +9,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/master.css" id="st">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marmelad&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
     <div class="container-fluid">
-      <a href="./reg.html" id="reg" type="button" class="btn btn-default">ЗАРЕГИСТРИРОВАТЬ КЛАСС</a>
-      <a href="./edit.html" id="change" type="button" class="btn btn-default">ИЗМЕНИТЬ СОСТАВ КЛАССА</a>
-      <a href="./webcam.html" id="cam" role="botton" class="btn btn-default">ОТКРЫТЬ КАМЕРУ</a>
+      <a href="./reg.html" id="reg" type="button" class="btn btn-default" onclick="theme2()">ЗАРЕГИСТРИРОВАТЬ КЛАСС</a>
+      <a href="./edit.html" id="change" type="button" class="btn btn-default" onclick="theme1()">ИЗМЕНИТЬ СОСТАВ КЛАССА</a>
+      <a id="theme" type="button" class="btn btn-default" onclick="theme()">СВЕТЛАЯ ТЕМА</a>
     </div>
 
-    <div class="container-fluid">
-      <button id="save" type="button" class="btn btn-default" class="fixed-bottom">СОХРАНИТЬ</button>
-    </div>
 
+    <script src="./themeee.js">
+
+    </script>
   </body>
 </html>
