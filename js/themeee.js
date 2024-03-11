@@ -1,12 +1,12 @@
 let st = document.getElementById('st');
 function theme() {
   let th = document.getElementById('theme');
-  if (st.getAttribute("href") == "master.css") {
-    st.href = "masterlight.css";
+  if (st.getAttribute("href") == "css/style.css") {
+    st.href = "css/masterlight.css";
     th.textContent = "ТЕМНАЯ ТЕМА";
   }
   else {
-    st.href = "master.css";
+    st.href = "css/style.css";
     th.textContent = "СВЕТЛАЯ ТЕМА";
   };
   localStorage.removeItem('theme');
