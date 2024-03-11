@@ -1,46 +1,62 @@
 body {
-  background-color: #ECF1FB;
+  background-color: #314146;
   margin: 30px;
+  margin-top: 50px;
+  transition-duration: 300ms;
 }
 
 /* ЗАРЕГИСТРИРОВАТЬ КЛАСС */
 .btn {
-font-family: 'Marmelad';
-font-style: normal;
-font-weight: 400;
+font-family: "Exo 2", sans-serif;
+font-optical-sizing: auto;
+font-weight: 300;
 font-size: 16px;
 line-height: 21px;
-padding: 15px;
-color: #ECF1FB;
-background-color: #535A67;
+padding: 25px;
+color: #fff;
+background-color: #5B7279;
 border-radius: 20px;
 width: 100%;
 margin-top: 30px;
 min-width: 288px;
 }
+#theme {
+  color: #fff;
+}
+
 .btn:hover {
   color: #4684FF;
 }
-
-#save {
-  font-family: 'Marmelad';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-  padding: 15px;
-  color: #fff;
-  background-color: #4684FF;
-  margin-top: 30px;
-  border-radius: 0px;
-  min-width: 288px;
+#input::placeholder {
+    color: #fff;
+    opacity: 0.5;
 }
+#class::placeholder {
+    color: #fff;
+    opacity: 0.5;
+}
+#input1::placeholder {
+    color: #fff;
+    opacity: 0.5;
+}
+#teacher::placeholder {
+    color: #fff;
+    opacity: 0.5;
+}
+#myInput::placeholder {
+    color: #fff;
+    opacity: 0.5;
+}
+
 #input {
   padding: 15px;
   border-radius: 18px;
-  font-family: 'Marmelad';
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  color: #fff;
+  background-color: #5F6769;
+  border: 0px;
   font-size: 11px;
   min-width: 267px;
 }
@@ -48,9 +64,12 @@ min-width: 288px;
   padding: 15px;
   margin-top: 20px;
   border-radius: 20px;
-  font-family: 'Marmelad';
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  color: #fff;
+  background-color: #5F6769;
+  border: 0px;
   font-size: 11px;
   min-width: 267px;
 }
@@ -59,9 +78,12 @@ min-width: 288px;
   margin-top: 20px;
   padding: 10px;
   border-radius: 20px;
-  font-family: 'Marmelad';
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  background-color: #5F6769;
+  color: #fff;
+  border: 0px;
   font-size: 11px;
   min-width: 267px;
 }
@@ -69,24 +91,28 @@ min-width: 288px;
   padding: 15px;
   margin-top: 20px;
   border-radius: 20px;
-  font-family: 'Marmelad';
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  color: #fff;
+  background-color: #5F6769;
+  border: 0px;
   font-size: 11px;
   min-width: 267px;
 }
+
 #add {
-  background-color: #4684FF;
-  color: white;
+  background-color: #5B7279;
+  color: #fff;
   margin-top: 20px;
   padding: 10px 20px 10px 20px;
   margin: 90px;
   margin-top: 20px;
   margin-bottom: 0px;
   border-radius: 20px;
-  font-family: 'Marmelad';
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
   font-size: 16px;
   text-align: center;
   display: block;
@@ -103,32 +129,19 @@ min-width: 288px;
   display: block;
 }
 
-.name {
-  font-family: 'Marmelad';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 21px;
-  text-align: center;
-  padding: 5px;
-  color: #4684FF;
-  background-color: #ECF1FB;
-  border: 3px solid #4684FF;
-  margin-top: 10px;
-  border-radius: 20px;
-}
+
 
 li {
-  font-family: 'Marmelad';
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
   font-size: 16px;
   line-height: 21px;
   text-align: center;
   padding: 5px;
-  color: #4684FF;
-  background-color: #ECF1FB;
-  border: 3px solid #4684FF;
+  color: #fff;
+  background-color: #314146;
+  border: 3px solid #5B7279;
   margin-left: -30px;
   margin-top: 10px;
   border-radius: 20px;
@@ -137,32 +150,32 @@ li {
 
 #save1 {
   position: fixed;
-  background-color: #4684FF;
-  color: white;
+  background-color: #5B7279;
+  color: #fff;
   margin-top: 20px;
   padding: 20px 20px 20px 20px;
   margin-top: 20px;
   margin-top: 480px;
-  font-family: 'Marmelad';
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
   font-size: 16px;
   text-align: center;
   display: block;
   text-decoration: none;
 }
 #find {
-  background-color: #4684FF;
-  color: white;
+  background-color: #5B7279;
+  color: #fff;
   margin-top: 20px;
   padding: 10px 20px 10px 20px;
   margin: 90px;
   margin-top: 20px;
   margin-bottom: 0px;
   border-radius: 20px;
-  font-family: 'Marmelad';
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
   font-size: 16px;
   text-align: center;
   display: block;
@@ -170,15 +183,15 @@ li {
 }
 #save2 {
   position: fixed;
-  background-color: #4684FF;
-  color: white;
+  background-color: #5B7279;
+  color: #fff;
   margin-top: 20px;
   padding: 20px 20px 20px 20px;
   margin-top: 20px;
   margin-top: 480px;
-  font-family: 'Marmelad';
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Exo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
   font-size: 16px;
   text-align: center;
   display: block;
@@ -187,9 +200,13 @@ li {
 #ar {
   font-size: 40px;
   text-align: center;
-  color: #4684FF;
+  color: #fff;
   text-decoration: none;
 }
 #back {
   width: 100%;
+}
+.close {
+  color: white;
+  opacity: 1;
 }
