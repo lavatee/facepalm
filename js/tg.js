@@ -1,4 +1,3 @@
-
 var mylist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < mylist.length; i++) {
@@ -51,24 +50,53 @@ function newElement() {
   }
 }
 async function saveli() {
+  let sa = document.getElementById('save1');
+  sa.style.display = 'none';
+
   const liElements = document.querySelectorAll('li');
   const textValues = [];
+
   liElements.forEach(element => {
     textValues.push(element.textContent.replace('×', ''));
   });
+
   console.log(textValues);
-  const data = { name: textValues, class: document.getElementById('input').value, teacher: document.getElementById('teacher').value};
-  const requestOptions = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
+
+  const data = {
+    name: textValues,
+    class: document.getElementById('input').value,
+    teacher: document.getElementById('teacher').value
   };
-  await fetch('https://65e9d389c9bf92ae3d3a5a5a.mockapi.io/api/v1/students', requestOptions)
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.error('Error', error));
+
+  const checkIfExists = async () => {
+    const response = await fetch('https://65e9d389c9bf92ae3d3a5a5a.mockapi.io/api/v1/students');
+    const students = await response.json();
+
+    const johnExists = students.some(student => student.class === document.getElementById('input').value);
+
+    if (!johnExists) {
+      sendData();
+    } else {
+      alert("Object with class " + document.getElementById('input').value + " already exists in the API");
+    }
+  }
+
+  const sendData = async () => {
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    };
+
+    await fetch('https://65e9d389c9bf92ae3d3a5a5a.mockapi.io/api/v1/students', requestOptions)
+      .then(response => response.json())
+      .then(data => console.log(data))
+      .catch(error => console.error('Error', error));
+  }
+
+  checkIfExists();
 }
 
 async function foundclass() {
