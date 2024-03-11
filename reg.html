@@ -9,22 +9,37 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-    <link rel="stylesheet" href="css/master.css" id="st">
+    <link rel="stylesheet" href="css/style.css" id="stt">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
   <body>
+      <div class="container-fluid" id="back">
+        <a href="./tg.html" type="button" class="glyphicon glyphicon-arrow-left" class="form-control" id="ar">×</a>
+      </div>
+      <div class="container-fluid">
+        <input type="text" id="input" class="form-control" placeholder="Введите класс">
+      </div>
+      <div class="container-fluid">
+        <input type="text" id="teacher" class="form-control" placeholder="Введите id классного руководителя">
+      </div>
+      <div class="container-fluid">
+        <input type="text" id="myInput" class="form-control" placeholder="Введите ФИ ученика">
+      </div>
+      <div class="container-fluid" id="addd">
+        <a type="button" id="add" onclick="newElement()">+</a>
+      </div>
+    <ul id="myUL1">
+
+    </ul>
     <div class="container-fluid">
-      <a href="./reg.html" id="reg" type="button" class="btn btn-default" onclick="theme2()">ЗАРЕГИСТРИРОВАТЬ КЛАСС</a>
-      <a href="./edit.html" id="change" type="button" class="btn btn-default" onclick="theme1()">ИЗМЕНИТЬ СОСТАВ КЛАССА</a>
-      <a id="theme" type="button" class="btn btn-default" onclick="theme()">СВЕТЛАЯ ТЕМА</a>
+      <a type="button" class="fixed-bottom" id="save1" onclick="saveli()">сохранить</a>
     </div>
 
 
-    <script src="./themeee.js">
-
-    </script>
+    <script src="js/tg.js"></script>
+    <script src="js/theme.js"></script>
   </body>
 </html>
