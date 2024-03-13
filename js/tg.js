@@ -48,7 +48,7 @@ function newElement() {
   const liElem = document.querySelectorAll('li');
   cl = document.getElementById('input').value;
   te = document.getElementById('teacher').value;
-  if (liElem.length !== 0 && cl != "" && te != "") {
+  if (liElem.length !== 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
     let sav = document.getElementById('save1');
     sav.style.display = 'block';
   }
