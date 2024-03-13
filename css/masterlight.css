@@ -1,7 +1,8 @@
 body {
   background-color: #E4EDF0;
-  margin: 30px;
+  margin: 20px;
   margin-top: 50px;
+  transition-duration: 300ms;
 }
 
 /* ЗАРЕГИСТРИРОВАТЬ КЛАСС */
@@ -169,7 +170,7 @@ li {
   font-weight: 300;
   font-size: 16px;
   text-align: center;
-  display: block;
+  display: none;
   text-decoration: none;
 }
 #find {
@@ -202,7 +203,7 @@ li {
   font-weight: 300;
   font-size: 16px;
   text-align: center;
-  display: block;
+  display: none;
   text-decoration: none;
 }
 #ar {
