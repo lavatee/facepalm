@@ -1,6 +1,6 @@
 body {
   background-color: #314146;
-  margin: 30px;
+  margin: 20px;
   margin-top: 50px;
   transition-duration: 300ms;
 }
@@ -161,7 +161,7 @@ li {
   font-weight: 300;
   font-size: 16px;
   text-align: center;
-  display: block;
+  display: none;
   text-decoration: none;
 }
 #find {
@@ -194,7 +194,7 @@ li {
   font-weight: 300;
   font-size: 16px;
   text-align: center;
-  display: block;
+  display: none;
   text-decoration: none;
 }
 #ar {
@@ -207,6 +207,7 @@ li {
   width: 100%;
 }
 .close {
-  color: white;
+  color: #314146;
   opacity: 1;
+  margin-top: -3px;
 }
