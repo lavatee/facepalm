@@ -31,7 +31,11 @@ function newElement() {
   li.appendChild(t);
   if (inputValue === '') {
     alert("Введите имя ученика");
-  } else {
+  }
+  else if (inputValue.indexOf(' ') < 1) {
+    alert("Ученик без имени или фамилии");
+  }
+  else {
     document.getElementById("myUL1").appendChild(li);
   }
   document.getElementById("myInput").value = "";
@@ -41,14 +45,129 @@ function newElement() {
   span.className = "close";
   span.appendChild(txt);
   li.appendChild(span);
+  const liElem = document.querySelectorAll('li');
+  cl = document.getElementById('input').value;
+  te = document.getElementById('teacher').value;
+  if (liElem.length !== 0 && cl != "" && te != "") {
+    let sav = document.getElementById('save1');
+    sav.style.display = 'block';
+  }
+  else {
+    let sav = document.getElementById('save1');
+    sav.style.display = 'none';
+  };
 
   for (i = 0; i < close.length; i++) {
     close[i].onclick = function() {
       var div = this.parentElement;
       div.remove();
+      const liElem = document.querySelectorAll('li');
+      cl = document.getElementById('input').value;
+      te = document.getElementById('teacher').value;
+      var number = parseInt(cl);
+      var letter = cl.substr(parseInt(cl).toString().length);
+      if (liElem.length !== 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
+        let sav = document.getElementById('save1');
+        sav.style.display = 'block';
+      }
+      else {
+        let sav = document.getElementById('save1');
+        sav.style.display = 'none';
+      };
     }
   }
 }
+
+function newElementt() {
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("myInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("Введите имя ученика");
+  }
+  else if (inputValue.indexOf(' ') < 1) {
+    alert("Ученик без имени или фамилии");
+  }
+  else {
+    document.getElementById("myUL1").appendChild(li);
+  }
+  document.getElementById("myInput").value = "";
+
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  li.appendChild(span);
+  const liElem = document.querySelectorAll('li');
+  cl = document.getElementById('class').value;
+  te = document.getElementById('teacher').value;
+  var number = parseInt(cl);
+  var letter = cl.substr(parseInt(cl).toString().length);
+  if (liElem.length !== 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
+    let sav = document.getElementById('save2');
+    sav.style.display = 'block';
+  }
+  else {
+    let sav = document.getElementById('save2');
+    sav.style.display = 'none';
+  };
+
+  for (i = 0; i < close.length; i++) {
+    close[i].onclick = function() {
+      var div = this.parentElement;
+      div.remove();
+      const liElem = document.querySelectorAll('li');
+      cl = document.getElementById('input').value;
+      te = document.getElementById('teacher').value;
+      var number = parseInt(cl);
+      var letter = cl.substr(parseInt(cl).toString().length);
+      if (liElem.length !== 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
+        let sav = document.getElementById('save2');
+        sav.style.display = 'block';
+      }
+      else {
+        let sav = document.getElementById('save2');
+        sav.style.display = 'none';
+      };
+    }
+  }
+}
+
+
+
+function iff() {
+  const liElem = document.querySelectorAll('li');
+  cl = document.getElementById('input').value;
+  te = document.getElementById('teacher').value;
+  var number = parseInt(cl);
+  var letter = cl.substr(parseInt(cl).toString().length);
+  if (liElem.length !== 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
+    let sav = document.getElementById('save1');
+    sav.style.display = 'block';
+  }
+  else {
+    let sav = document.getElementById('save1');
+    sav.style.display = 'none';
+  };
+}
+function ifff() {
+  const liElem = document.querySelectorAll('li');
+  cl = document.getElementById('class').value;
+  var number = parseInt(cl);
+  var letter = cl.substr(parseInt(cl).toString().length);
+  te = document.getElementById('teacher').value;
+  if (liElem.length !== 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
+    let sav = document.getElementById('save2');
+    sav.style.display = 'block';
+  }
+  else {
+    let sav = document.getElementById('save2');
+    sav.style.display = 'none';
+  };
+}
+
+
 async function saveli() {
   let sa = document.getElementById('save1');
   sa.style.display = 'none';
@@ -77,7 +196,7 @@ async function saveli() {
     if (!johnExists) {
       sendData();
     } else {
-      alert("Object with class " + document.getElementById('input').value + " already exists in the API");
+      alert("Класс " + document.getElementById('input').value + " уже существует");
     }
   }
 
@@ -94,6 +213,7 @@ async function saveli() {
       .then(response => response.json())
       .then(data => console.log(data))
       .catch(error => console.error('Error', error));
+    localStorage.setItem('class', 'Класс ' + document.getElementById('input').value + ' добавлен');
   }
 
   checkIfExists();
@@ -178,4 +298,5 @@ async function saveli1() {
     .then(response => response.json())
     .then(data => console.log(data))
     .catch(error => console.error('Error', error));
+  localStorage.setItem('class', 'Класс ' + document.getElementById('class').value + ' изменен');
 }
