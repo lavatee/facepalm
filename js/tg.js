@@ -1,3 +1,4 @@
+
 var mylist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < mylist.length; i++) {
@@ -48,7 +49,7 @@ function newElement() {
   const liElem = document.querySelectorAll('li');
   cl = document.getElementById('input').value;
   te = document.getElementById('teacher').value;
-  if (liElem.length !== 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
+  if (liElem.length !== 0 && cl != "" && te != "") {
     let sav = document.getElementById('save1');
     sav.style.display = 'block';
   }
@@ -102,9 +103,7 @@ function newElementt() {
   const liElem = document.querySelectorAll('li');
   cl = document.getElementById('class').value;
   te = document.getElementById('teacher').value;
-  var number = parseInt(cl);
-  var letter = cl.substr(parseInt(cl).toString().length);
-  if (liElem.length !== 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
+  if (liElem.length !== 0 && cl != "" && te != "") {
     let sav = document.getElementById('save2');
     sav.style.display = 'block';
   }
@@ -118,11 +117,9 @@ function newElementt() {
       var div = this.parentElement;
       div.remove();
       const liElem = document.querySelectorAll('li');
-      cl = document.getElementById('input').value;
+      cl = document.getElementById('class').value;
       te = document.getElementById('teacher').value;
-      var number = parseInt(cl);
-      var letter = cl.substr(parseInt(cl).toString().length);
-      if (liElem.length !== 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
+      if (liElem.length !== 0 && cl != "" && te != "") {
         let sav = document.getElementById('save2');
         sav.style.display = 'block';
       }
@@ -154,10 +151,8 @@ function iff() {
 function ifff() {
   const liElem = document.querySelectorAll('li');
   cl = document.getElementById('class').value;
-  var number = parseInt(cl);
-  var letter = cl.substr(parseInt(cl).toString().length);
   te = document.getElementById('teacher').value;
-  if (liElem.length !== 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
+  if (liElem.length !== 0 && cl != "" && te != "") {
     let sav = document.getElementById('save2');
     sav.style.display = 'block';
   }
