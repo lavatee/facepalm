@@ -17,32 +17,28 @@
   </head>
   <body>
       <div class="container-fluid" id="back">
-        <a href="index.html" type="button" class="glyphicon glyphicon-arrow-left" id="ar">×</a>
+      <a href="./index.html" type="button" class="glyphicon glyphicon-arrow-left" id="ar">×</a>
+    </div>
+      <div class="container-fluid">
+        <input type="text" id="class" class="form-control" placeholder="Введите класс">
+      </div>
+      <div class="container-fluid" id="found">
+        <a type="button" id="find" onclick="foundclass()" unselectable="on">Найти класс</a>
       </div>
       <div class="container-fluid">
-        <input type="text" id="input" class="form-control" placeholder="Введите класс" oninput="iff()">
-      </div>
-      <div class="container-fluid">
-        <input type="text" id="teacher" class="form-control" placeholder="Введите id классного руководителя" oninput="iff()">
+        <input type="text" id="teacher" class="form-control" placeholder="Введите id классного руководителя" oninput="ifff()">
       </div>
       <div class="container-fluid">
         <input type="text" id="myInput" class="form-control" placeholder="Введите ФИ ученика">
       </div>
       <div class="container-fluid" id="addd">
-        <a type="button" id="add" onclick="newElement()">+</a>
+        <a type="button" id="add" onclick="newElementt()" unselectable="on">+</a>
       </div>
-      <div class="container-fluid fixed-bottom" id="phone">
-      </div>
-      <ul id="myUL2" class="fixed-bottom" class="container-fluid">
-        <p id="uch">В классе отсутствуют ученики</p>
-        <p id="cla">Некорректно введен класс</p>
-        <p id="tea">Некорректное id учителя</p>
-      </ul>
     <ul id="myUL1">
 
     </ul>
     <div class="container-fluid">
-      <a type="button" class="fixed-bottom" id="save1" onclick="saveli()">сохранить</a>
+      <a unselectable="on" type="button" class="fixed-bottom" id="save2" onclick="saveli1()" onclick="saveli()">сохранить</a>
     </div>
 
 
