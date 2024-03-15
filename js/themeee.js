@@ -1,5 +1,12 @@
 let st = document.getElementById('st');
 let th = document.getElementById('theme');
+if (st.getAttribute("href") == "css/masterlight.css") {
+    localStorage.setItem('theme1', "СВЕТЛАЯ ТЕМА");
+}
+else {
+    st.href = "css/masterlight.css";
+    th.textContent = "СВЕТЛАЯ ТЕМА";
+};
 function theme() {
   if (st.getAttribute("href") == "css/masterlight.css") {
     st.href = "css/style.css";
