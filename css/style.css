@@ -211,3 +211,15 @@ li {
   opacity: 1;
   margin-top: -3px;
 }
+p {
+  margin-top: 10px;
+  color: white;
+  padding-left: 15%;
+}
+a:hover {
+  cursor: pointer;
+}
+a {
+  display: block;
+  user-select: none;
+}
