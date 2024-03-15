@@ -7,7 +7,7 @@ else {
     th.textContent = "ТЕМНАЯ ТЕМА";
 };
 function theme() {
-  if (st.getAttribute("href") == "css/masterlight.css") {
+  if (st.getAttribute("href") == "css/masterlight.css" || st.getAttribute("href") == "https://lavatee.github.io/kazino/css/masterlight.css") {
     st.href = "css/style.css";
     th.textContent = "СВЕТЛАЯ ТЕМА";
   }
