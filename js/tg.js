@@ -1,3 +1,4 @@
+
 var mylist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < mylist.length; i++) {
@@ -50,9 +51,60 @@ function newElement() {
   te = document.getElementById('teacher').value;
   var number = parseInt(cl);
   var letter = cl.substr(parseInt(cl).toString().length);
-  if (liElem.length !== 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
+  if (liElem.length != 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
     let sav = document.getElementById('save1');
     sav.style.display = 'block';
+  }
+  if (liElem.length == 0) {
+    let pp = document.getElementById('uch');
+    if(pp) {
+      pp.remove();
+    }
+    let li = document.createElement("p");
+    let t = document.createTextNode("В классе отсутствуют ученики");
+    li.id = "uch";
+    li.appendChild(t);
+    document.getElementById("myUL2").appendChild(li);
+  }
+  if (cl == "" || number < 0 || number > 12 || letter.length != 1) {
+    let pp = document.getElementById('cla');
+    if(pp) {
+      pp.remove();
+    }
+    let li = document.createElement("p");
+    let t = document.createTextNode("Некорректно введен класс");
+    li.id = "cla";
+    li.appendChild(t);
+    document.getElementById("myUL2").appendChild(li);
+  }
+  if (te == "") {
+    let pp = document.getElementById('tea');
+    if(pp) {
+      pp.remove();
+    }
+    let li = document.createElement("p");
+    let t = document.createTextNode("Некорректное id учителя");
+    li.id = "tea";
+    li.appendChild(t);
+    document.getElementById("myUL2").appendChild(li);
+  }
+  if (liElem.length > 0) {
+    let pp = document.getElementById('uch');
+    if(pp) {
+      pp.remove();
+    }
+  }
+  if (cl != "" && number > 0 && number < 12 && letter.length == 1) {
+    let pp = document.getElementById('cla');
+    if(pp) {
+      pp.remove();
+    }
+  }
+  if (te != "") {
+    let pp = document.getElementById('tea');
+    if(pp) {
+      pp.remove();
+    }
   }
   else {
     let sav = document.getElementById('save1');
@@ -68,9 +120,60 @@ function newElement() {
       te = document.getElementById('teacher').value;
       var number = parseInt(cl);
       var letter = cl.substr(parseInt(cl).toString().length);
-      if (liElem.length !== 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
+      if (liElem.length != 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
         let sav = document.getElementById('save1');
         sav.style.display = 'block';
+      }
+      if (liElem.length == 0) {
+        let pp = document.getElementById('uch');
+        if(pp) {
+          pp.remove();
+        }
+        let li = document.createElement("p");
+        let t = document.createTextNode("В классе отсутствуют ученики");
+        li.id = "uch";
+        li.appendChild(t);
+        document.getElementById("myUL2").appendChild(li);
+      }
+      if (cl == "" || number < 0 || number > 12 || letter.length != 1) {
+        let pp = document.getElementById('cla');
+        if(pp) {
+          pp.remove();
+        }
+        let li = document.createElement("p");
+        let t = document.createTextNode("Некорректно введен класс");
+        li.id = "cla";
+        li.appendChild(t);
+        document.getElementById("myUL2").appendChild(li);
+      }
+      if (te == "") {
+        let pp = document.getElementById('tea');
+        if(pp) {
+          pp.remove();
+        }
+        let li = document.createElement("p");
+        let t = document.createTextNode("Некорректное id учителя");
+        li.id = "tea";
+        li.appendChild(t);
+        document.getElementById("myUL2").appendChild(li);
+      }
+      if (liElem.length > 0) {
+        let pp = document.getElementById('uch');
+        if(pp) {
+          pp.remove();
+        }
+      }
+      if (cl != "" && number > 0 && number < 12 && letter.length == 1) {
+        let pp = document.getElementById('cla');
+        if(pp) {
+          pp.remove();
+        }
+      }
+      if (te != "") {
+        let pp = document.getElementById('tea');
+        if(pp) {
+          pp.remove();
+        }
       }
       else {
         let sav = document.getElementById('save1');
@@ -104,7 +207,7 @@ function newElementt() {
   const liElem = document.querySelectorAll('li');
   cl = document.getElementById('class').value;
   te = document.getElementById('teacher').value;
-  if (liElem.length !== 0 && cl != "" && te != "") {
+  if (liElem.length != 0 && cl != "" && te != "") {
     let sav = document.getElementById('save2');
     sav.style.display = 'block';
   }
@@ -120,7 +223,7 @@ function newElementt() {
       const liElem = document.querySelectorAll('li');
       cl = document.getElementById('class').value;
       te = document.getElementById('teacher').value;
-      if (liElem.length !== 0 && cl != "" && te != "") {
+      if (liElem.length != 0 && cl != "" && te != "") {
         let sav = document.getElementById('save2');
         sav.style.display = 'block';
       }
@@ -140,9 +243,60 @@ function iff() {
   te = document.getElementById('teacher').value;
   var number = parseInt(cl);
   var letter = cl.substr(parseInt(cl).toString().length);
-  if (liElem.length !== 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
+  if (liElem.length != 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
     let sav = document.getElementById('save1');
     sav.style.display = 'block';
+  }
+  if (liElem.length == 0) {
+    let pp = document.getElementById('uch');
+    if(pp) {
+      pp.remove();
+    }
+    let li = document.createElement("p");
+    let t = document.createTextNode("В классе отсутствуют ученики");
+    li.id = "uch";
+    li.appendChild(t);
+    document.getElementById("myUL2").appendChild(li);
+  }
+  if (cl == "" || number < 0 || number > 12 || letter.length != 1) {
+    let pp = document.getElementById('cla');
+    if(pp) {
+      pp.remove();
+    }
+    let li = document.createElement("p");
+    let t = document.createTextNode("Некорректно введен класс");
+    li.id = "cla";
+    li.appendChild(t);
+    document.getElementById("myUL2").appendChild(li);
+  }
+  if (te == "") {
+    let pp = document.getElementById('tea');
+    if(pp) {
+      pp.remove();
+    }
+    let li = document.createElement("p");
+    let t = document.createTextNode("Некорректное id учителя");
+    li.id = "tea";
+    li.appendChild(t);
+    document.getElementById("myUL2").appendChild(li);
+  }
+  if (liElem.length > 0) {
+    let pp = document.getElementById('uch');
+    if(pp) {
+      pp.remove();
+    }
+  }
+  if (cl != "" && number > 0 && number < 12 && letter.length == 1) {
+    let pp = document.getElementById('cla');
+    if(pp) {
+      pp.remove();
+    }
+  }
+  if (te != "") {
+    let pp = document.getElementById('tea');
+    if(pp) {
+      pp.remove();
+    }
   }
   else {
     let sav = document.getElementById('save1');
@@ -153,7 +307,7 @@ function ifff() {
   const liElem = document.querySelectorAll('li');
   cl = document.getElementById('class').value;
   te = document.getElementById('teacher').value;
-  if (liElem.length !== 0 && cl != "" && te != "") {
+  if (liElem.length != 0 && cl != "" && te != "") {
     let sav = document.getElementById('save2');
     sav.style.display = 'block';
   }
@@ -239,16 +393,22 @@ async function foundclass() {
             var div = this.parentElement;
             div.remove();
           }
+        }
       }
-      }
+      let teach = document.getElementById('teacher')
+      teach.value = person.teacher;
+      let sav = document.getElementById('save2');
+      sav.style.display = 'block';
     });
   })
   .catch(error => {
-    console.error('Error fetching data: ', error);
+    console.error('Ошибка нахождения класса: ', error);
   });
 }
 
 async function saveli1() {
+  let sa = document.getElementById('save2');
+  sa.style.display = 'none';
   const attributeName = 'class';
   const attributeValue = document.getElementById('class').value;
   await fetch('https://65e9d389c9bf92ae3d3a5a5a.mockapi.io/api/v1/students', {
