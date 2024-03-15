@@ -208,6 +208,7 @@ li {
 }
 #ar {
   font-size: 40px;
+  text-align: center;
   color: #314146;
   text-decoration: none;
 }
@@ -221,7 +222,7 @@ li {
 }
 p {
   margin-top: 10px;
-  color: black;
+  color: white;
   padding-left: 15%;
 }
 a:hover {
