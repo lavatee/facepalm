@@ -65,6 +65,8 @@ function newElement() {
     li.id = "uch";
     li.appendChild(t);
     document.getElementById("myUL2").appendChild(li);
+    let sav = document.getElementById('save1');
+    sav.style.display = 'none';
   }
   if (cl == "" || number < 0 || number > 12 || letter.length != 1) {
     let pp = document.getElementById('cla');
@@ -76,6 +78,8 @@ function newElement() {
     li.id = "cla";
     li.appendChild(t);
     document.getElementById("myUL2").appendChild(li);
+    let sav = document.getElementById('save1');
+    sav.style.display = 'none';
   }
   if (te == "") {
     let pp = document.getElementById('tea');
@@ -87,6 +91,8 @@ function newElement() {
     li.id = "tea";
     li.appendChild(t);
     document.getElementById("myUL2").appendChild(li);
+    let sav = document.getElementById('save1');
+    sav.style.display = 'none';
   }
   if (liElem.length > 0) {
     let pp = document.getElementById('uch');
@@ -134,6 +140,8 @@ function newElement() {
         li.id = "uch";
         li.appendChild(t);
         document.getElementById("myUL2").appendChild(li);
+        let sav = document.getElementById('save1');
+        sav.style.display = 'none';
       }
       if (cl == "" || number < 0 || number > 12 || letter.length != 1) {
         let pp = document.getElementById('cla');
@@ -145,6 +153,8 @@ function newElement() {
         li.id = "cla";
         li.appendChild(t);
         document.getElementById("myUL2").appendChild(li);
+        let sav = document.getElementById('save1');
+        sav.style.display = 'none';
       }
       if (te == "") {
         let pp = document.getElementById('tea');
@@ -156,6 +166,8 @@ function newElement() {
         li.id = "tea";
         li.appendChild(t);
         document.getElementById("myUL2").appendChild(li);
+        let sav = document.getElementById('save1');
+        sav.style.display = 'none';
       }
       if (liElem.length > 0) {
         let pp = document.getElementById('uch');
@@ -257,6 +269,8 @@ function iff() {
     li.id = "uch";
     li.appendChild(t);
     document.getElementById("myUL2").appendChild(li);
+    let sav = document.getElementById('save1');
+    sav.style.display = 'none';
   }
   if (cl == "" || number < 0 || number > 12 || letter.length != 1) {
     let pp = document.getElementById('cla');
@@ -268,6 +282,8 @@ function iff() {
     li.id = "cla";
     li.appendChild(t);
     document.getElementById("myUL2").appendChild(li);
+    let sav = document.getElementById('save1');
+    sav.style.display = 'none';
   }
   if (te == "") {
     let pp = document.getElementById('tea');
@@ -279,6 +295,8 @@ function iff() {
     li.id = "tea";
     li.appendChild(t);
     document.getElementById("myUL2").appendChild(li);
+    let sav = document.getElementById('save1');
+    sav.style.display = 'none';
   }
   if (liElem.length > 0) {
     let pp = document.getElementById('uch');
