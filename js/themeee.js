@@ -1,13 +1,13 @@
 let st = document.getElementById('st');
 let th = document.getElementById('theme');
 function theme() {
-  if (st.getAttribute("href") == "master.css") {
-    st.href = "masterlight.css";
-    th.textContent = "ТЕМНАЯ ТЕМА";
+  if (st.getAttribute("href") == "css/masterlight.css") {
+    st.href = "css/style.css";
+    th.textContent = "СВЕТЛАЯ ТЕМА";
   }
   else {
-    st.href = "master.css";
-    th.textContent = "СВЕТЛАЯ ТЕМА";
+    st.href = "css/masterlight.css";
+    th.textContent = "ТЕМНАЯ ТЕМА";
   };
   localStorage.removeItem('theme');
   localStorage.setItem('theme', st.href);
