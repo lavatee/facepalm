@@ -3,11 +3,11 @@ function theme() {
   let th = document.getElementById('theme');
   if (st.getAttribute("href") == "css/masterlight.css") {
     st.href = "css/style.css";
-    th.textContent = "ТЕМНАЯ ТЕМА";
+    th.textContent = "СВЕТЛАЯ ТЕМА";
   }
   else {
     st.href = "css/masterlight.css";
-    th.textContent = "СВЕТЛАЯ ТЕМА";
+    th.textContent = "ТЕМНАЯ ТЕМА";
   };
   localStorage.removeItem('theme');
   localStorage.setItem('theme', st.href);
