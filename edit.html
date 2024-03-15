@@ -23,7 +23,7 @@
         <input type="text" id="class" class="form-control" placeholder="Введите класс">
       </div>
       <div class="container-fluid" id="found">
-        <a type="button" id="find" onclick="foundclass()">Найти класс</a>
+        <a type="button" id="find" onclick="foundclass()" unselectable="on">Найти класс</a>
       </div>
       <div class="container-fluid">
         <input type="text" id="teacher" class="form-control" placeholder="Введите id классного руководителя" oninput="ifff()">
@@ -32,13 +32,13 @@
         <input type="text" id="myInput" class="form-control" placeholder="Введите ФИ ученика">
       </div>
       <div class="container-fluid" id="addd">
-        <a type="button" id="add" onclick="newElementt()">+</a>
+        <a type="button" id="add" onclick="newElementt()" unselectable="on">+</a>
       </div>
     <ul id="myUL1">
 
     </ul>
     <div class="container-fluid">
-      <a type="button" class="fixed-bottom" id="save2" onclick="saveli1()" onclick="saveli()">сохранить</a>
+      <a unselectable="on" type="button" class="fixed-bottom" id="save2" onclick="saveli1()" onclick="saveli()">сохранить</a>
     </div>
 
 
