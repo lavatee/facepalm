@@ -1,6 +1,6 @@
 let st = document.getElementById('st');
 let th = document.getElementById('theme');
-if (st.getAttribute("href") == "css/style.css" || st.getAttribute("href") == "https://lavatee.github.io/kazino/css/style.css	") {
+if (st.getAttribute("href") == "css/style.css" || st.getAttribute("href") == "https://lavatee.github.io/kazino/css/style.css") {
     localStorage.setItem('theme1', "СВЕТЛАЯ ТЕМА");
 }
 else {
