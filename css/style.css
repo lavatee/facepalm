@@ -210,10 +210,26 @@ li {
   opacity: 1;
   margin-top: -3px;
 }
+#phone {
+  height: 20px;
+  background-color: #5B7279;
+}
+#myUL2 {
+  background-color: #5B7279;
+}
 p {
-  margin-top: 10px;
-  color: white;
-  padding-left: 15%;
+  position: relative;
+  color: #fff;
+  border: 2px red;
+  margin: -20px;
+  margin-top: 5px;
+  padding: 10px;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
 }
 a:hover {
   cursor: pointer;
