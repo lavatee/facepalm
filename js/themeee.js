@@ -4,8 +4,7 @@ if (st.getAttribute("href") == "css/masterlight.css") {
     localStorage.setItem('theme1', "СВЕТЛАЯ ТЕМА");
 }
 else {
-    st.href = "css/masterlight.css";
-    th.textContent = "СВЕТЛАЯ ТЕМА";
+    localStorage.setItem('theme1', "ТЕМНАЯ ТЕМА");
 };
 function theme() {
   if (st.getAttribute("href") == "css/masterlight.css") {
