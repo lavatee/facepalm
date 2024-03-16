@@ -255,7 +255,7 @@ function iff() {
   te = document.getElementById('teacher').value;
   var number = parseInt(cl);
   var letter = cl.substr(parseInt(cl).toString().length);
-  if (liElem.length != 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
+  if (liElem.length != 0 && cl != "" && te != "" && te.includes("@") && number > 0 && number < 12 && letter.length == 1) {
     let sav = document.getElementById('save1');
     sav.style.display = 'block';
   }
@@ -285,7 +285,7 @@ function iff() {
     let sav = document.getElementById('save1');
     sav.style.display = 'none';
   }
-  if (te == "") {
+  if (!te.includes("@")) {
     let pp = document.getElementById('tea');
     if(pp) {
       pp.remove();
@@ -310,7 +310,7 @@ function iff() {
       pp.remove();
     }
   }
-  if (te != "") {
+  if (te.includes("@")) {
     let pp = document.getElementById('tea');
     if(pp) {
       pp.remove();
