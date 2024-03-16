@@ -232,3 +232,24 @@ a {
   display: block;
   user-select: none;
 }
+#phone {
+  height: 20px;
+  background-color: #FF8080;
+}
+#myUL2 {
+  background-color: #FF8080;
+  box-shadow: 0px 0px 30px rgba(255, 128, 128, 0.5);
+}
+p {
+  position: relative;
+  color: #4B1515;
+  margin: -20px;
+  margin-top: 5px;
+  padding: 10px;
+  font-family: "Exo 2", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
