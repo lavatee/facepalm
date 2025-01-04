@@ -1,4 +1,12 @@
-
+const backend = "http://77.222.63.142:8000"
+const tg = window.Telegram.WebApp;
+// const tg = {
+//   initDataUnsafe: {
+//     user: {
+//       id: 1234
+//     }
+//   }
+// }
 var mylist = document.getElementsByTagName("LI");
 var i;
 for (i = 0; i < mylist.length; i++) {
@@ -48,7 +56,7 @@ function newElement() {
   li.appendChild(span);
   const liElem = document.querySelectorAll('li');
   cl = document.getElementById('input').value;
-  te = document.getElementById('teacher').value;
+  te = `${tg.initDataUnsafe.user.id}`;
   var number = parseInt(cl);
   var letter = cl.substr(parseInt(cl).toString().length);
   if (liElem.length != 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
@@ -218,7 +226,7 @@ function newElementt() {
   li.appendChild(span);
   const liElem = document.querySelectorAll('li');
   cl = document.getElementById('class').value;
-  te = document.getElementById('teacher').value;
+  te = `${tg.initDataUnsafe.user.id}`;
   if (liElem.length != 0 && cl != "" && te != "") {
     let sav = document.getElementById('save2');
     sav.style.display = 'block';
@@ -252,10 +260,10 @@ function newElementt() {
 function iff() {
   const liElem = document.querySelectorAll('li');
   cl = document.getElementById('input').value;
-  te = document.getElementById('teacher').value;
+  te = `${tg.initDataUnsafe.user.id}`;
   var number = parseInt(cl);
   var letter = cl.substr(parseInt(cl).toString().length);
-  if (liElem.length != 0 && cl != "" && te != "" && te.includes("@") && number > 0 && number < 12 && letter.length == 1) {
+  if (liElem.length != 0 && cl != "" && te != "" && number > 0 && number < 12 && letter.length == 1) {
     let sav = document.getElementById('save1');
     sav.style.display = 'block';
   }
@@ -285,19 +293,6 @@ function iff() {
     let sav = document.getElementById('save1');
     sav.style.display = 'none';
   }
-  if (!te.includes("@")) {
-    let pp = document.getElementById('tea');
-    if(pp) {
-      pp.remove();
-    }
-    let li = document.createElement("p");
-    let t = document.createTextNode("Некорректное id учителя");
-    li.id = "tea";
-    li.appendChild(t);
-    document.getElementById("myUL2").appendChild(li);
-    let sav = document.getElementById('save1');
-    sav.style.display = 'none';
-  }
   if (liElem.length > 0) {
     let pp = document.getElementById('uch');
     if(pp) {
@@ -310,12 +305,6 @@ function iff() {
       pp.remove();
     }
   }
-  if (te.includes("@")) {
-    let pp = document.getElementById('tea');
-    if(pp) {
-      pp.remove();
-    }
-  }
   else {
     let sav = document.getElementById('save1');
     sav.style.display = 'none';
@@ -324,7 +313,8 @@ function iff() {
 function ifff() {
   const liElem = document.querySelectorAll('li');
   cl = document.getElementById('class').value;
-  te = document.getElementById('teacher').value;
+  te = `${tg.initDataUnsafe.user.id}`;
+  console.log(te)
   if (liElem.length != 0 && cl != "" && te != "") {
     let sav = document.getElementById('save2');
     sav.style.display = 'block';
@@ -338,13 +328,22 @@ function ifff() {
 
 async function saveli() {
   let sa = document.getElementById('save1');
-  sa.style.display = 'none';
+  
 
   const liElements = document.querySelectorAll('li');
   const textValues = [];
 
   liElements.forEach(element => {
-    textValues.push(element.textContent.replace('×', ''));
+    let isExist = false
+    textValues.forEach(name => {
+      if (name == element.textContent.replace('×', '')) {
+        isExist = true
+      }
+    })
+    if (!isExist) {
+      textValues.push(element.textContent.replace('×', ''));
+    }
+    
   });
 
   console.log(textValues);
@@ -352,21 +351,21 @@ async function saveli() {
   const data = {
     name: textValues,
     class: document.getElementById('input').value,
-    teacher: document.getElementById('teacher').value
+    teacher: tg.initDataUnsafe.user.id
   };
+  
+  // const checkIfExists = async () => {
+  //   const response = await fetch('https://65e9d389c9bf92ae3d3a5a5a.mockapi.io/api/v1/students');
+  //   const students = await response.json();
 
-  const checkIfExists = async () => {
-    const response = await fetch('https://65e9d389c9bf92ae3d3a5a5a.mockapi.io/api/v1/students');
-    const students = await response.json();
+  //   const johnExists = students.some(student => student.class === document.getElementById('input').value);
 
-    const johnExists = students.some(student => student.class === document.getElementById('input').value);
-
-    if (!johnExists) {
-      sendData();
-    } else {
-      alert("Класс " + document.getElementById('input').value + " уже существует");
-    }
-  }
+  //   if (!johnExists) {
+  //     sendData();
+  //   } else {
+  //     alert("Класс " + document.getElementById('input').value + " уже существует");
+  //   }
+  // }
 
   const sendData = async () => {
     const requestOptions = {
@@ -377,23 +376,29 @@ async function saveli() {
       body: JSON.stringify(data),
     };
 
-    await fetch('https://65e9d389c9bf92ae3d3a5a5a.mockapi.io/api/v1/students', requestOptions)
-      .then(response => response.json())
+    await fetch(`${backend}/api/classes`, requestOptions)
+      .then(response => {
+        if (response.status == 200) {
+          sa.style.display = 'none';
+        }
+        return response.json()
+      })
       .then(data => console.log(data))
-      .catch(error => console.error('Error', error));
-    localStorage.setItem('class', 'Класс ' + document.getElementById('input').value + ' добавлен');
+      .catch(error => {
+        console.error('Error', error)
+        alert("Класс " + document.getElementById('input').value + " уже существует");
+      });
   }
-
-  checkIfExists();
+  sendData()
 }
 
-async function foundclass() {
-  await fetch('https://65e9d389c9bf92ae3d3a5a5a.mockapi.io/api/v1/students')
-  .then(response => response.json())
-  .then(data => {
-    const johns = data.filter(person => person.class === document.getElementById('class').value);
-    johns.forEach(person => {
-      for ( persons of person.name  ) {
+async function findclass() {
+  try {
+    const response = await fetch(`${backend}/api/classes/${document.getElementById('class').value}`)
+  console.log(response)
+  const data = await response.json()
+  console.log(data)
+    for ( persons of data.name ) {
         console.log(persons);
         var li1 = document.createElement("li");
         var inputValue1 = persons;
@@ -413,64 +418,37 @@ async function foundclass() {
           }
         }
       }
-      let teach = document.getElementById('teacher')
-      teach.value = person.teacher;
       let sav = document.getElementById('save2');
       sav.style.display = 'block';
-    });
-  })
-  .catch(error => {
-    console.error('Ошибка нахождения класса: ', error);
-  });
+  } catch (error) {
+    console.log(error)
+  }
+  
 }
 
 async function saveli1() {
   let sa = document.getElementById('save2');
-  sa.style.display = 'none';
-  const attributeName = 'class';
-  const attributeValue = document.getElementById('class').value;
-  await fetch('https://65e9d389c9bf92ae3d3a5a5a.mockapi.io/api/v1/students', {
-    method: 'GET',
-  })
-  .then(response => response.json())
-  .then(data => {
-    const elementsToDelete = data.filter(element => element[attributeName] === attributeValue);
-    elementsToDelete.forEach(element => {
-      fetch(`https://65e9d389c9bf92ae3d3a5a5a.mockapi.io/api/v1/students/${element.id}`, {
-        method: 'DELETE',
-      })
-      .then(response => {
-        if (response.ok) {
-          console.log(`Элемент с ID ${element.id} успешно удален`);
-        } else {
-          console.error(`Произошла ошибка при удалении элемента с ID ${element.id}`);
-        }
-      })
-      .catch(error => {
-        console.error('Произошла ошибка при отправке запроса:', error);
-      });
-    });
-  })
-  .catch(error => {
-    console.error('Произошла ошибка при получении данных:', error);
-  });
   const liElements = document.querySelectorAll('li');
   const textValues = [];
   liElements.forEach(element => {
     textValues.push(element.textContent.replace('×', ''));
   });
   console.log(textValues);
-  const data = { name: textValues, class: document.getElementById('class').value, teacher: document.getElementById('teacher').value};
+  const data = { name: textValues, class: document.getElementById('class').value, teacher: tg.initDataUnsafe.user.id};
   const requestOptions = {
-    method: 'POST',
+    method: 'PUT',
     headers: {
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(data),
   };
-  await fetch('https://65e9d389c9bf92ae3d3a5a5a.mockapi.io/api/v1/students', requestOptions)
-    .then(response => response.json())
+  await fetch(`${backend}/api/classes`, requestOptions)
+    .then(response => {
+      if (response.status == 200) {
+        sa.style.display = 'none';
+      }
+      return response.json()
+    })
     .then(data => console.log(data))
-    .catch(error => console.error('Error', error));
-  localStorage.setItem('class', 'Класс ' + document.getElementById('class').value + ' изменен');
+    .catch(error => alert("Вы не являетесь классным руководителем этого класса"));
 }
