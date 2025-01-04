@@ -12,4 +12,3 @@ if (tg) {
     console.log(`Last Name: ${lastName}`);
 }
 
-export default tg
