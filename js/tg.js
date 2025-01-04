@@ -1,8 +1,17 @@
-import tg from "./themeee"
+
 const backend = "http://77.222.63.142:8000"
-//const tg = window.Telegram.WebApp;
-const userId = tg.initDataUnsafe.user.id;
-console.log(userId)
+const tg = window.Telegram.WebApp;
+if (tg) {
+    const userId = tg.initDataUnsafe.user.id; 
+    const username = tg.initDataUnsafe.user.username;
+    const firstName = tg.initDataUnsafe.user.first_name; 
+    const lastName = tg.initDataUnsafe.user.last_name; 
+
+    console.log(`User ID: ${userId}`);
+    console.log(`Username: ${username}`);
+    console.log(`First Name: ${firstName}`);
+    console.log(`Last Name: ${lastName}`);
+}
 // const tg = {
 //   initDataUnsafe: {
 //     user: {
