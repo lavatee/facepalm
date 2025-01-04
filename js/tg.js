@@ -1,5 +1,6 @@
+import tg from "./themeee"
 const backend = "http://77.222.63.142:8000"
-const tg = window.Telegram.WebApp;
+//const tg = window.Telegram.WebApp;
 const userId = tg.initDataUnsafe.user.id;
 console.log(userId)
 // const tg = {
