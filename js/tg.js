@@ -6,13 +6,12 @@ if (tg) {
     const username = tg.initDataUnsafe.user.username;
     const firstName = tg.initDataUnsafe.user.first_name; 
     const lastName = tg.initDataUnsafe.user.last_name;
-    const chatId = tg.initDataUnsafe.chat.id;
 
     console.log(`User ID: ${userId}`);
     console.log(`Username: ${username}`);
     console.log(`First Name: ${firstName}`);
     console.log(`Last Name: ${lastName}`);
-    console.log(`Chat ID: ${chatId}`)
+    console.log(`Chat ID: ${tg}`)
 }
 // const tg = {
 //   initDataUnsafe: {
@@ -466,4 +465,5 @@ async function saveli1() {
     .then(data => console.log(data))
     .catch(error => alert("Вы не являетесь классным руководителем этого класса"));
 }
+
 
