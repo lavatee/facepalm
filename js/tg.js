@@ -11,7 +11,7 @@ if (tg) {
     console.log(`Username: ${username}`);
     console.log(`First Name: ${firstName}`);
     console.log(`Last Name: ${lastName}`);
-    console.log(`Chat ID: ${tg}`)
+    console.log(tg)
 }
 // const tg = {
 //   initDataUnsafe: {
@@ -465,5 +465,6 @@ async function saveli1() {
     .then(data => console.log(data))
     .catch(error => alert("Вы не являетесь классным руководителем этого класса"));
 }
+
 
 
