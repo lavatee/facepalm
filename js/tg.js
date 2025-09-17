@@ -2,16 +2,18 @@
 const backend = "http://77.222.63.142:8000"
 const tg = window.Telegram.WebApp;
 if (tg) {
+    console.log(tg)
     const userId = tg.initDataUnsafe.user.id; 
     const username = tg.initDataUnsafe.user.username;
     const firstName = tg.initDataUnsafe.user.first_name; 
     const lastName = tg.initDataUnsafe.user.last_name;
+    const signature = tg.initDataUnsafe.signature
 
     console.log(`User ID: ${userId}`);
     console.log(`Username: ${username}`);
     console.log(`First Name: ${firstName}`);
-    console.log(`Last Name: ${lastName}`);
-    console.log(tg)
+    console.log(`signature: ${signature}`);
+    
 }
 // const tg = {
 //   initDataUnsafe: {
@@ -465,6 +467,7 @@ async function saveli1() {
     .then(data => console.log(data))
     .catch(error => alert("Вы не являетесь классным руководителем этого класса"));
 }
+
 
 
 
